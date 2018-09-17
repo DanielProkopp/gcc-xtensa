@@ -11,7 +11,7 @@ before_script:
 script: 
         - ./contrib/download_prerequisites 
         - ./configure 
-        - make --silent > make.log
+        - make -j5 --silent > make.log
 
 notifications:
         email:
