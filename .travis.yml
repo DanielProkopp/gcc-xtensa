@@ -5,11 +5,15 @@ language: c
 sudo: required
 dist: trusty
 
-before_script:
-        sudo apt-get install gcc-multilib g++-multilib -y
-
+apt:
+        packages:
+                - gcc-multilib
+                - g++-multilib
+                
 script: 
-        ./contrib/download_prerequisites && ./configure && make --silent
+        - ./contrib/download_prerequisites 
+        - ./configure 
+        - make --silent > make.log
 
 notifications:
         email:
