@@ -1,0 +1,12 @@
+os: linux
+
+language: c
+
+script: configure && make
+
+notifications:
+        email:
+                recipients:
+                        - danielprokopp2@gmail.com
+                on_success: always
+                on_failure: always
