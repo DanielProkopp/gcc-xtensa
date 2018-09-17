@@ -2,7 +2,14 @@ os: linux
 
 language: c
 
-script: ./contrib/download_prerequisites && ./configure && make
+sudo: required
+dist: trusty
+
+before_script:
+        sudo apt-get install gcc-multilib g++-multilib -y
+
+script: 
+        ./contrib/download_prerequisites && ./configure && make
 
 notifications:
         email:
