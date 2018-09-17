@@ -5,11 +5,9 @@ language: c
 sudo: required
 dist: trusty
 
-apt:
-        packages:
-                - gcc-multilib
-                - g++-multilib
-                
+before_script:
+        - sudo apt-get install gcc-multilib -y
+        - sudo apt-get install g++-multilib -y
 script: 
         - ./contrib/download_prerequisites 
         - ./configure 
