@@ -9,7 +9,7 @@ before_script:
         sudo apt-get install gcc-multilib g++-multilib -y
 
 script: 
-        ./contrib/download_prerequisites && ./configure && make
+        ./contrib/download_prerequisites && ./configure && make --silent
 
 notifications:
         email:
